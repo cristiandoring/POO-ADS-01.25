@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Conta_1 = require("./Conta");
+var Funcionario_1 = require("./Funcionario");
+var conta1 = new Conta_1.Conta();
+conta1.numero = '1424s-5';
+conta1.saldo = 1000;
+conta1.limite = 100;
+conta1.depositar(600);
+console.log('Saldo ' + conta1.saldo);
+conta1.sacar(300) ? console.log('Saque realizado') : console.log('Saque não realizado');
+conta1.sacar(600) ? console.log('Saque realizado') : console.log('Saque não realizado');
+console.log(conta1.consultarSaldo());
+var funcionario1 = new Funcionario_1.Funcionario;
+funcionario1.nome = 'Cristian';
+funcionario1.salario = 1000;
+funcionario1.aumentarSalario(10);
+console.log(funcionario1.consultarDados());
