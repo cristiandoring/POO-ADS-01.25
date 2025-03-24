@@ -11,12 +11,7 @@ computador1.qtdNucleosProcessador = 8
 
 computador1.ligar()
 
-let softw1:Software = new Software()
-
-softw1.nome='Windows 11'
-softw1.qtdMemoria = 11000
-softw1.qtdHD = 2000
-
+let softw1:Software = new Software('Windows 11', 11000, 2000)
 
 let softw2:Software = new Software()
 
