@@ -1,8 +1,11 @@
 class Agencia{
-    numeroAgencia:string
+    private _numeroAgencia: string
+    public get numeroAgencia(): string {
+        return this._numeroAgencia
+    }
 
     constructor(num:string){
-        this.numeroAgencia = num
+        this._numeroAgencia = num
     }
 }
 
