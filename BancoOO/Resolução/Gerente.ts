@@ -1,25 +1,30 @@
-export class Gerente{
+import Funcionario from '../Resolução/Funcionario'
 
-    private _nome: string
-    public get nome(): string {
-        return this._nome
-    }
-    public set nome(value: string) {
-        this._nome = value
-    }
-    private _salario: number
-    public get salario(): number {
-        return this._salario
-    }
-    public set salario(value: number) {
-        this._salario = value
-    }
-    aumentarSalarioFixo(){
-        this.aumentarSalario(0.1)
+export class Gerente extends Funcionario{
+
+    private _nomeUsuario: string
+
+    public get nomeUsuario(): string {
+        return this._nomeUsuario
     }
 
+    private _senha: string
+    public get senha(): string {
+        return this._senha
+    }
+    public set senha(value: string) {
+        this._senha = value
+    }
 
-    aumentarSalario(valor:number){
-        this.salario +=  this.salario*valor/100
+    bonificacao(valor:number=0.15):void{
+        this.salario += this.salario*valor
+    }
+
+    mostrarDados() {
+
+        console.log(this.nome)
+        console.log(this.salario)
+        console.log(this.bonificacao())
+        console.log(this.nomeUsuario)
     }
 }

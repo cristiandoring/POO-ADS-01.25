@@ -2,6 +2,8 @@ import { Conta } from "./Conta"
 import { Funcionario } from "./Funcionario"
 import { Gerente } from "./Gerente"
 import {Cliente} from './Cliente'
+import { Telefonista } from "./Telefonista"
+import { Secretarias } from "./Secretarias"
 
 let conta1:Conta = new Conta()
 
@@ -43,10 +45,10 @@ conta1.agencia = new Agencia("123")
 let gerente1:Gerente = new Gerente()
 gerente1.nome = 'Juliano'
 gerente1.salario = 10000
-console.log(gerente1.aumentarSalario(25))
-console.log(gerente1.aumentarSalarioFixo)
 
 
-let cartaoCredito2 = new CartaoDeCredito('215','10/29', 'João da silva')
+let telefonista1: Telefonista = new Telefonista()
+telefonista1.codigo = 'hn31*2'
 
-
+let secretaria1: Secretarias = new Secretarias()
+secretaria1.ramal = '1048'

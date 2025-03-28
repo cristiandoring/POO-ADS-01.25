@@ -1,4 +1,4 @@
-export class Funcionario{
+export default class Funcionario{
     private _nome: string
     public get nome(): string {
         return this._nome
@@ -21,5 +21,13 @@ export class Funcionario{
     consultarDados():string{
         return `Nome: ${this.nome} Salario: ${this.salario}`
     }
+
+    bonificacao(valor:number=0.1):void{
+        this.salario += this.salario*valor
+    }
+
+    
 }
+
+
 
