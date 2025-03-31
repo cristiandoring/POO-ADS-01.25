@@ -7,8 +7,16 @@ export class Gerente extends Funcionario{
     public get nomeUsuario(): string {
         return this._nomeUsuario
     }
+    public set nomeUsuario(value: string) {
+        this._nomeUsuario = value
+    }
+
+    
+
+    
 
     private _senha: string
+
     public get senha(): string {
         return this._senha
     }
@@ -20,11 +28,14 @@ export class Gerente extends Funcionario{
         this.salario += this.salario*valor
     }
 
-    mostrarDados() {
+    constructor(){
+        super() //chama o construtor da classe base
+    }
 
-        console.log(this.nome)
-        console.log(this.salario)
-        console.log(this.bonificacao())
+    mostrarDados():void {
+
+        super.mostrarDados()
         console.log(this.nomeUsuario)
+        console.log(this.senha)
     }
 }

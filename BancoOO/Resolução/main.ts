@@ -30,7 +30,6 @@ funcionario1.aumentarSalario(10)
 
 console.log(funcionario1.consultarDados())
 
-
 let cartaoCredito1:CartaoDeCredito = new CartaoDeCredito()
 
 let cliente1:Cliente = new Cliente()
@@ -51,4 +50,8 @@ let telefonista1: Telefonista = new Telefonista()
 telefonista1.codigo = 'hn31*2'
 
 let secretaria1: Secretarias = new Secretarias()
-secretaria1.ramal = '1048'
+secretaria1.numeroRamal = 1048
+secretaria1.nome = 'Maria'
+secretaria1.salario = 8000
+
+secretaria1.bonificacao()

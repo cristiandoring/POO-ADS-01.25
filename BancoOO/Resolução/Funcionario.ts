@@ -26,7 +26,13 @@ export default class Funcionario{
         this.salario += this.salario*valor
     }
 
-    
+    mostrarDados():void {
+
+        
+        console.log(this.nome)
+        console.log(this.salario)
+        console.log(this.bonificacao())
+    }
 }
 
 

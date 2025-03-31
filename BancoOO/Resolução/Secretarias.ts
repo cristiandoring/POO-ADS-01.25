@@ -1,31 +1,30 @@
 import Funcionario from '../Resolução/Funcionario';
 
 export class Secretarias extends Funcionario {
-    private _numeroDocumento: string;
 
-    public get numeroDocumento(): string {
-        return this._numeroDocumento;
+    private _numeroRamal: number;
+
+    public get numeroRamal(): number {
+        return this._numeroRamal;
     }
 
-    public set numeroDocumento(value: string) {
-        this._numeroDocumento = value;
+    public set numeroRamal(value: number) {
+        this._numeroRamal = value;
     }
 
-    constructor(nome: string, salario: number, numeroDocumento: string) {
-        super();
-        this.nome = nome;
-        this.salario = salario;
-        this._numeroDocumento = numeroDocumento;
-    }
 
     bonificacao(valor: number = 0.1): void {
         this.salario += this.salario * valor;
     }
-    mostrarDados() {
+    
+    constructor(){
+        super() //chama o construtor da classe base
+    }
 
-        console.log(this.nome)
-        console.log(this.salario)
-        console.log(this.bonificacao())
-        console.log(this.numeroDocumento)
+    mostrarDados():void {
+
+        super.mostrarDados()
+        console.log(this.numeroRamal)
+
     }
 }

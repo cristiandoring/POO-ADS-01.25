@@ -4,6 +4,7 @@ import { Notebook } from "./Notebook"
 import { Smarthphone } from "./Smarthphone"
 import { Software } from "./Software"
 import { Tablet } from "./Tablet"
+
 let computador1 = new Computador()
 
 computador1.marca = 'Dell'
